@@ -8,8 +8,3 @@
       copy:
         src: "{{ lookup('env','WORKSPACE') }}/target/MavenAnsibleWebApp1.war"
         dest: "/opt/tomcat/webapps/MavenAnsibleWebApp1.war"
-
-    - name: Restart Tomcat
-      systemd:
-        name: tomcat
-        state: restarted
